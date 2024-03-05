@@ -2,6 +2,7 @@
     box-sizing: border-box;
     margin: 0;
     padding: 0;
+    cursor: default;
 }
 
 body {
@@ -18,27 +19,19 @@ body {
 
 .container {
     border: #D4D4D2 4px solid;
-    width: 500px;
+    width: 482px;
     height: auto;
     border-radius: 15px;
     display: flex;
     flex-wrap: wrap;
     gap: 5px;
-    justify-content: center;  
+    justify-content: space-evenly;  
 }
+  
 
-.display {
-    width: 500px;
-    height: 100px;
-    border-radius: 0px;
-    border-bottom: #D4D4D2 4px solid;
-    
-}
-
-div {
-    /* border: black 1px solid; */
-    width: 115px;
-    height: 115px;
+button {
+    width: 105px;
+    height: 105px;
     border-radius: 50px;
     display: flex;
     justify-content: center;
@@ -46,9 +39,15 @@ div {
     font-size: 40px;
     font-family: Arial, Helvetica, sans-serif;
     margin-bottom: 10px;
+    border: none;
 }
 
 .operator {
+    background-color: #eba441;
+    color: white;
+}
+
+.equal {
     background-color: #eba441;
     color: white;
 }
@@ -58,12 +57,23 @@ div {
     color: white;
 }
 
-.display {
+#display {
+    width: 500px;
+    height: 100px;
+    border-radius: 0px;
+    border-bottom: #D4D4D2 4px solid;
     font-family: Arial, Helvetica, sans-serif;
-    font-size: 50px;
+    font-size: 77px;
+    height: 130px;
+    border-top-right-radius: 15px;
+    border-top-left-radius: 15px;
+    background-color: #1C1C1C;
     color: white;
+    display: flex;
+    align-items: center;
     justify-content: end;
-    padding-right: 50px;
+    padding: 30px;
+    overflow: hidden;
 }
 
 .others {
@@ -73,5 +83,23 @@ div {
 
 .zero {
     width: 225px;
+}
+
+#display-two {
+    /* width: 500px;
+    height: 300px; */
+    /* border:#D4D4D2 4px solid; */
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 77px;
+    height: 130px;
+    border-top-right-radius: 15px;
+    border-top-left-radius: 15px;
+    background-color: #1C1C1C;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content:space-between;
+    padding: 0px 50px 0px;
+    margin: -100px auto 0px auto;
 }
 
