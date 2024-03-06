@@ -1,20 +1,20 @@
 const buttons = document.querySelectorAll('button');
-const display = document.getElementById('display'); // or use appropriate selector for class or ID
+const display = document.getElementById('display'); 
 const numbers = document.querySelectorAll('.number');
 
 sessionData = {
     operandOne: '',
     operator: '',
     operandTwo: ''
-};
+}; //for storing the button value
 
 
 function displayLimit() {
-  var display = document.getElementById("display"); // Assuming you have an element with id "display"
+  var display = document.getElementById("display"); 
   if (display.textContent.length > 8) {
     let sliced = display.textContent.slice(0, 8);
     console.log(sliced);
-    display.textContent = sliced; // Truncate the display to 8 characters
+    display.textContent = sliced; 
   }
 }
 
@@ -40,7 +40,18 @@ buttons.forEach((button) => {
           negative(display.textContent);
         }
     });
+  });
+
+
+
+buttons.forEach((button) => {
+    button.addEventListener('click', () => {
+      button.style.backgroundColor = 'silver';
     
+    setTimeout(() => {
+      button.style.backgroundColor = ''; 
+      }, 50); //for returning the color of the buttons
+    });
 });
 
 function operands(number) {
